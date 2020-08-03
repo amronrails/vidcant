@@ -8,7 +8,7 @@ There is a task that wakes up every day at 2 am and fetches Canada's official co
 and updates the database.
 
 ## Note
-This project was built in few hours and needs a lot of polishing.
+This project was built in a few hours and needs a lot of polishing.
 
 ## Versions
 * Ruby version
@@ -23,6 +23,9 @@ This project was built in few hours and needs a lot of polishing.
   yarn
 rails db:create
 rails db:migrate
+redis-server
+sidekiq
+rails s
 ```
 The task will be scheduled automatically to start as 2 am. if you want to fetch the data manually, use `bundle exec rake fetch_data:update` OR click on enque now in <http://localhost:3000/sidekiq/cron>
  
